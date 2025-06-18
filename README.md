@@ -1,4 +1,4 @@
-# TMDB
+# The Movie Database
 not finished yet
 
 ## Running

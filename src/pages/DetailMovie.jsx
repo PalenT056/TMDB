@@ -37,6 +37,7 @@ export default function DetailMovie () {
                             </div>
                         ))}
                     </div>
+                    <p className="text-gray-500">Popularity : {detail.popularity}</p>
 
                     <p className="mt-20 text-gray-400 text-xl"><i>{detail.tagline}</i></p>
                     <p className="text-2xl font-bold">Overview</p>

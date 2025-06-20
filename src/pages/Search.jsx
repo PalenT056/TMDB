@@ -33,7 +33,7 @@ export default function Search () {
             <div className="w-[1100px] mt-10 h-auto flex p-4 gap-6 flex flex-col items-center">
                 <SearchBar setQuery={setQuery}/>
                 <SearchBtn setType={setType}/>
-                <Card data={data}/>
+                <Card data={data} type={type}/>
             </div>
         </div>
     )

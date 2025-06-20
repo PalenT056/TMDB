@@ -1,4 +1,7 @@
-export default function Card ({ data }) {
+import { Link } from "react-router-dom"
+import { slugify } from "../../../utils/slugify"
+
+export default function Card ({ data, type }) {
     
     return (
         <div className="flex flex-col gap-4 w-full">
@@ -8,8 +11,10 @@ export default function Card ({ data }) {
                         <img className="h-[150px] rounded-md" src={`https://image.tmdb.org/t/p/original/` + p.poster_path}/>
                     </div>
                     <div className="mx-2 w-full overflow-x-auto">
-                        <p className="font-bold">{p.title}</p>
-                        <p className="text-gray-400 text-sm">{p.release_date}</p>
+                        <Link to={`/detail/${type}/${p.id}-${slugify(p.title || p.name)}`}>
+                            <p className="font-bold">{p.title || p.name }</p>
+                        </Link>
+                        <p className="text-gray-400 text-sm">{p.release_date || p.first_air_date}</p>
                         <p className="text-gray-500 mt-2">{p.overview}</p>
                     </div>
                 </div>

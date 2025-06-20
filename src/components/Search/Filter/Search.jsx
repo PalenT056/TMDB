@@ -10,7 +10,7 @@ export default function SearchBar ({ setQuery }) {
     }
 
     return (
-        <div className="w-full h-[50px] border border-gray-200 shadow-md">
+        <div className="w-full h-[50px] border border-gray-200 shadow-md rounded-md">
             <form onSubmit={handleSearch} className="w-full h-full flex">
                 <input 
                     type="text"

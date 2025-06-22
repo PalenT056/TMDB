@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Loading from "./Loading";
 import axios from "axios";
 const apiKey = import.meta.env.VITE_TMDB_API_KEY
 
@@ -16,7 +17,7 @@ export default function DetailSeries () {
         .then(res => setDetail(res.data))
     }, [id])
 
-    if (!detail) return <p>Loading...</p>
+    if (!detail) return <Loading/>
 
     return (
         <div className="flex w-full h-screen items-center justify-center">

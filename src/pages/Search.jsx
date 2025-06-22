@@ -12,7 +12,7 @@ export default function Search () {
 
     useEffect(() => {
 
-        if (!query) {
+        if (!query || "") {
             setQuery("avengers")
         }
 
